@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
   padding: 0px;
   margin: 0px;
@@ -7,6 +8,7 @@
   --primaryColor: #66b5c4;
   --secondaryColor: #00839c;
   --background: #cce6eb;
+  --textColor: #fff
 }
 body {
   background-color: var(--background);
@@ -14,4 +16,44 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: "Open Sans",sans-serif;
+}
+.container{
+    width: 50vw;
+    height: 40vh;
+    background-color: var(--primaryColor);
+    border-radius: 3px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result-container{
+   display: inline-block;
+   width: 200px;
+   /* height: 15px; */
+   background-color: var(--secondaryColor);
+   padding: .8px 0;
+   margin: 0 0 10px 0;
+}
+.copy-btn{
+    background-color: var(--primaryColor);
+}
+.generate-btn{
+    width: 200px;
+    margin: 17px 0 0 0;
+}
+button{
+    padding: 3px 5px;
+    border-radius: 1px;
+    outline: none;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    cursor: pointer;
+    /* box-shadow: 2px 0px 5px rgba(0, 0, 0, .5); */
+}
+label{
+    color: var(--textColor);
+    padding: 10px 0;
 }
