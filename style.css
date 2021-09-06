@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 * {
   padding: 0px;
   margin: 0px;
@@ -8,7 +8,7 @@
   --primaryColor: #66b5c4;
   --secondaryColor: #00839c;
   --background: #cce6eb;
-  --textColor: #fff
+  --textColor: #fff;
 }
 body {
   background-color: var(--background);
@@ -16,44 +16,58 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.container{
-    width: 50vw;
-    height: 40vh;
-    background-color: var(--primaryColor);
-    border-radius: 3px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.container {
+  width: 20vw;
+  height: 42vh;
+  background-color: var(--primaryColor);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.result-container{
-   display: inline-block;
-   width: 200px;
-   /* height: 15px; */
-   background-color: var(--secondaryColor);
-   padding: .8px 0;
-   margin: 0 0 10px 0;
+.result-container {
+  display: inline-block;
+  width: 200px;
+  /* height: 15px; */
+  background-color: var(--secondaryColor);
+  padding: 3px 0;
+  margin: 0 0 10px 0;
+  border-radius: 3px;
 }
-.copy-btn{
-    background-color: var(--primaryColor);
+.copy-btn {
+  background-color: var(--primaryColor);
+  padding: 4px 6px;
+  margin: 0 0 0 4px;
+  border-radius: 2px;
 }
-.generate-btn{
-    width: 200px;
-    margin: 17px 0 0 0;
+.generate-btn {
+  width: 200px;
+  margin: 17px 0 0 0;
+  border-radius: 3px;
 }
-button{
-    padding: 3px 5px;
-    border-radius: 1px;
-    outline: none;
-    border: none;
-    background-color: var(--secondaryColor);
-    color: var(--textColor);
-    cursor: pointer;
-    /* box-shadow: 2px 0px 5px rgba(0, 0, 0, .5); */
+.settings {
+  width: 200px;
+  padding: 5px 0;
 }
-label{
-    color: var(--textColor);
-    padding: 10px 0;
+.setting {
+  margin: 5px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  padding: 3px 5px;
+  outline: none;
+  border: none;
+  background-color: var(--secondaryColor);
+  color: var(--textColor);
+  cursor: pointer;
+  /* box-shadow: 2px 0px 5px rgba(0, 0, 0, .5); */
+}
+label {
+  color: var(--textColor);
+  font-size: 13px;
 }
