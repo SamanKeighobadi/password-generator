@@ -1,3 +1,17 @@
-h1{
-    color: teal;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #66b5c4;
+  --secondaryColor: #00839c;
+  --background: #cce6eb;
+}
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
