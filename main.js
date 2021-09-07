@@ -8,6 +8,8 @@ const symbols = document.getElementById("symbols");
 const generateButton = document.getElementById("generate-btn");
 const clipBoard = document.getElementById("clipboard");
 
+////?   Event Listeners ?////
+
 // Copy password to clipboard button
 clipBoard.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
@@ -16,14 +18,14 @@ clipBoard.addEventListener("click", () => {
   if (!password) return;
 
   textarea.value = password;
-  document.body.appendChild(textarea)
-  textarea.select()
-  document.execCommand('copy');
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
   textarea.remove();
-  alert("Password copied to clipboard!")
-
+  alert("Password copied to clipboard!");
 });
 
+// Generate Password Event
 generateButton.addEventListener("click", () => {
   const length = +lengthInput.value;
   const hasLower = lowercase.checked;
@@ -70,6 +72,8 @@ const generatePassword = (upper, lower, number, symbol, length) => {
 
   return finalPassword;
 };
+
+////?  Generate Options Function ?////
 
 const randomLowercaseLetters = () => {
   // 97 means number of Browser characters on keyboard
