@@ -8,6 +8,21 @@ const symbols = document.getElementById("symbols");
 const generateButton = document.getElementById("generate-btn");
 const clipBoard = document.getElementById("clipboard");
 
+// Copy password to clipboard button
+clipBoard.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const password = result.innerText;
+
+  if (!password) return;
+
+  textarea.value = password;
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy');
+  textarea.remove();
+  alert("Password copied to clipboard!")
+
+});
 
 generateButton.addEventListener("click", () => {
   const length = +lengthInput.value;
@@ -26,33 +41,35 @@ generateButton.addEventListener("click", () => {
 });
 
 // Genrate Password Function
-const generatePassword = (upper,lower,number,symbol,length) =>{
-    //1. initialize password variabel
-    let generatePassword =''
-    const typeCount =  upper +lower + number + symbol 
+const generatePassword = (upper, lower, number, symbol, length) => {
+  //1. initialize password variabel
+  let generatePassword = "";
+  const typeCount = upper + lower + number + symbol;
 
-    //2. Filter out unchecked types
-    const typesArr = [{upper},{lower},{number},{symbol}].filter(item => Object.values(item)[0]);
+  //2. Filter out unchecked types
+  const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(
+    (item) => Object.values(item)[0]
+  );
 
-    //3. Loop over length call generator function for each type
-    if(typeCount === 0){
-      return ''
-    }
+  //3. Loop over length call generator function for each type
+  if (typeCount === 0) {
+    return "";
+  }
 
-    for(let i = 0;i<length;i+= typeCount) {
-        typesArr.forEach(type => {
-          const functionName = Object.keys(type)[0]
+  for (let i = 0; i < length; i += typeCount) {
+    typesArr.forEach((type) => {
+      const functionName = Object.keys(type)[0];
 
-          generatePassword += randomFunctions[functionName]()
-        })
-    }
+      generatePassword += randomFunctions[functionName]();
+    });
+  }
 
-    //4. And final password to the password vaiabel and return 
+  //4. And final password to the password vaiabel and return
 
-    const finalPassword = generatePassword.slice(0,length)
+  const finalPassword = generatePassword.slice(0, length);
 
-}
-
+  return finalPassword;
+};
 
 const randomLowercaseLetters = () => {
   // 97 means number of Browser characters on keyboard

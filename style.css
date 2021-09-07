@@ -71,3 +71,7 @@ label {
   color: var(--textColor);
   font-size: 13px;
 }
+
+#result {
+  display: inline-block;
+}
