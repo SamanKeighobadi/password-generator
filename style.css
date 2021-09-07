@@ -7,11 +7,11 @@
 :root {
   --primaryColor: #66b5c4;
   --secondaryColor: #00839c;
-  --background: #cce6eb;
+  --background: #2f6f95;
   --textColor: #fff;
 }
 body {
-  background-color: var(--background);
+  background-color: var(--primaryColor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ body {
 .container {
   width: 20vw;
   height: 42vh;
-  background-color: var(--primaryColor);
+  background-color: var(--background);
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -31,17 +31,17 @@ body {
 .result-container {
   display: inline-block;
   width: 200px;
-  /* height: 15px; */
-  background-color: var(--secondaryColor);
+  background-color: var(--primaryColor);
   padding: 3px 0;
   margin: 0 0 10px 0;
   border-radius: 3px;
 }
 .copy-btn {
-  background-color: var(--primaryColor);
+  background-color: var(--secondaryColor);
   padding: 4px 6px;
-  margin: 0 0 0 4px;
+  margin: 0 4px 0 0;
   border-radius: 2px;
+  float: right;
 }
 .generate-btn {
   width: 200px;
@@ -62,7 +62,7 @@ button {
   padding: 3px 5px;
   outline: none;
   border: none;
-  background-color: var(--secondaryColor);
+  background-color: var(--primaryColor);
   color: var(--textColor);
   cursor: pointer;
   /* box-shadow: 2px 0px 5px rgba(0, 0, 0, .5); */
@@ -74,4 +74,7 @@ label {
 
 #result {
   display: inline-block;
+  color: var(--textColor);
+  font-size: 13px;
+  margin: 2px 4px;
 }
