@@ -22,7 +22,11 @@ clipBoard.addEventListener("click", () => {
   textarea.select();
   document.execCommand("copy");
   textarea.remove();
-  alert("Password copied to clipboard!");
+  Swal.fire({
+    title: "Copied!",
+    icon: "success",
+    titleText: "Password copied to clipboard",
+  });
 });
 
 // Generate Password Event

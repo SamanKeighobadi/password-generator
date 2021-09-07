@@ -1,0 +1,23 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamanKeighobadi/password-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamanKeighobadi/password-generator/issues"
+  },
+  "homepage": "https://github.com/SamanKeighobadi/password-generator#readme",
+  "dependencies": {
+    "sweetalert2": "^11.1.4"
+  }
+}
